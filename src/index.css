@@ -1,13 +1,62 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'vazir';
+  src: url('./assets/fonts/Vazir.eot') format('eot'),
+  url('./assets/fonts/Vazir.woff') format('woff');
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+body {
+  direction: rtl;
+  font-family: vazir;
+  background-image: url('./assets/images/mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+@media (min-width: 576px) {
+  body {
+    background-image: url('./assets/images/tablet.jpg');
+    
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-image: url('./assets/images/desktop.jpg');
+    background-position: center;
+  }
+}
+  
+.header{
+
+  background-position: center;
+  background-size: cover;
+}
+
+.morning{
+  background-image: url('./assets/images/header1.jpg');
+}
+
+.midday{
+  background-image: url('./assets/images/header2.jpg');
+}
+
+.evening{
+  background-image: url('./assets/images/header3.jpg');
+}
+
+.night{
+  background-image: url('./assets/images/header4.jpg');
+  background-position: top !important;
 }
