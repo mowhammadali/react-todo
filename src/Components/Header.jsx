@@ -17,7 +17,7 @@ const Header = () => {
         <div className={`header ${time.getHours() > 4 && time.getHours() < 12 && "morning"} 
         ${time.getHours() > 11 && time.getHours() < 17 && "midday"}
         ${time.getHours() > 16 && time.getHours() < 20 && "evening"}
-        ${time.getHours() > 19 && time.getHours() < 5 && "night"}
+        ${time.getHours() > 19 && "night"}
         w-full px-6 py-3 rounded-t-xl xs:py-6`}>
             <h1 className='text-white text-xl xs:text-2xl'>{time.getFullYear()} , {time.getDate()} {nameOfMonth}</h1>
             <p className='text-white'>{time.getSeconds() < 10 ? `0${time.getSeconds()}` : time.getSeconds()} : 
